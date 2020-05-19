@@ -38,6 +38,7 @@ public class EstudianteServiceImpl implements EstudianteService{
 	}
 
 	@Override
+	@Transactional
 	public void delete(Integer codigoEstudiante) throws DataAccessException {
 		estudianteDAO.delete(codigoEstudiante);
 	}
