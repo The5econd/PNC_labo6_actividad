@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Nuevo estudiante</title>
+</head>
+<body>
+	<form th:action= "@{/insertarEstudiante}">
+		<input type = "submit" value = "Insertar nuevo estudiante">
+	</form><br>
+	
+	<form th:action="@{/borrarEstudiante}" method="post">
+		<label>Borrar estudiante por codigo: </label><input type="number" name = "codigo"/><br>
+		<input type="submit" value="Borrar">
+	</form>
+	
+	<form th:action="@{/listadoEstudiantes}">
+		<input type="submit" value="Mostrar estudiantes">
+	</form>
+</body>
+</html>
